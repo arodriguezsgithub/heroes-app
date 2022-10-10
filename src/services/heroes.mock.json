@@ -1,0 +1,34 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Superman",
+      "description": "The best"
+    },
+    {
+      "name": "Spiderman",
+      "description": "El hombre araña",
+      "id": 3
+    },
+    {
+      "name": "Hulk",
+      "description": "El increible Hulk",
+      "id": 5
+    },
+    {
+      "name": "Manuel",
+      "description": "El superheroe",
+      "id": 6
+    },
+    {
+      "name": "Pepito",
+      "description": "Man who is superhero",
+      "id": 7
+    },
+    {
+      "name": "Prueba",
+      "description": "Pruebaaaaaaa",
+      "id": 9
+    }
+  ]
+}

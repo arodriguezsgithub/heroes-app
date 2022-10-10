@@ -1,0 +1,29 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button *ngIf="hasHistory" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-icon-button (click)="goHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>Heroes app</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+
+  <mat-progress-bar
+    mode="indeterminate"
+    color="accent"
+    *ngIf="showLoading">
+  </mat-progress-bar>
+</p>
+
+<div
+  id="loadingPanel"
+  *ngIf="showLoading">
+</div>
+
+<div id="mainContainer">
+  <router-outlet
+    (activate)='onActivate()'>
+  </router-outlet>
+</div>

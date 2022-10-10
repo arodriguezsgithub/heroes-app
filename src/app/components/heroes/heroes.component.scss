@@ -1,0 +1,11 @@
+table, .mat-form-field {
+  width: 100%;
+}
+.button-cell{
+  padding-right: 0 !important;
+  text-align: right;
+  justify-content: flex-end;
+  button{
+    margin: 0 5px 0 0;
+  }
+}

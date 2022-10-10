@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-title *ngIf="heroId == -1">{{ newCardTitle }}</mat-card-title>
+  <mat-card-title *ngIf="heroId != -1">{{ editCardTitle }}</mat-card-title>
+  <mat-card-content>
+
+    <form id="editForm" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="name" appUppercase>
+      </mat-form-field>
+
+      <div *ngIf="heroForm.controls['name'].invalid && (heroForm.controls['name'].dirty || heroForm.controls['name'].touched)">
+        <mat-error *ngIf="heroForm.controls['name'].errors?.['required']">
+          Debes introducir un nombre
+        </mat-error>
+        <mat-error *ngIf="heroForm.controls['name'].errors?.['minlength']">
+          Nombre demasiado corto
+        </mat-error>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput type="text" formControlName="description" appUppercase></textarea>
+      </mat-form-field>
+
+      <div *ngIf="heroForm.controls['description'].invalid && (heroForm.controls['description'].dirty || heroForm.controls['description'].touched)">
+        <mat-error *ngIf="heroForm.controls['description'].errors?.['required']">
+          Debes introducir una descripción
+        </mat-error>
+      </div>
+
+      <button
+        mat-button
+        mat-raised-button
+        [disabled]="heroForm.invalid"
+        color="primary"
+        type="submit">
+        Guardar
+      </button>
+
+    </form>
+
+  </mat-card-content>
+</mat-card>

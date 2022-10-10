@@ -1,1 +1,1 @@
-# heroes-app
+# Instrucciones para lanzar la app:
